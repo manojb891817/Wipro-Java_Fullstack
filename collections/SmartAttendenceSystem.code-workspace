@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../SmartAttendenceSystem"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../multithreading"
+		}
+	],
+	"settings": {}
+}
