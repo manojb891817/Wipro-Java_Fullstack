@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Visitors information</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f7f7f7;
+        padding: 40px;
+      }
+      h2 {
+        margin-bottom: 5px;
+        letter-spacing: 1px;
+      }
+      table {
+        background: #fff;
+        border-collapse: collapse;
+        box-shadow: 0 2px 8px #ddd;
+        margin-top: 0;
+        width: 420px;
+      }
+      td {
+        padding: 12px 10px;
+        border: 1px solid #ddd;
+        vertical-align: middle;
+      }
+      tr:last-child td {
+        border-bottom: none;
+      }
+      th {
+        text-align: left;
+        background: #f4f4f4;
+        padding: 12px 10px;
+        border: 1px solid #ddd;
+        font-weight: normal;
+        letter-spacing: 1px;
+      }
+      .actions {
+        text-align: center;
+        padding-top: 14px;
+      }
+      hr {
+        border: none;
+        border-top: 2px solid #1976d2;
+        margin: 0 0 22px 0;
+        width: 420px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Visitors information</h2>
+    <hr />
+    <form>
+      <table>
+        <tr>
+          <td>Email address:</td>
+          <td><input type="email" name="email" required /></td>
+        </tr>
+        <tr>
+          <td>Interest:</td>
+          <td>
+            <input
+              type="checkbox"
+              name="interest"
+              value="research"
+              id="research"
+            />
+            <label for="research">Web for research</label><br />
+            <input
+              type="checkbox"
+              name="interest"
+              value="purchase"
+              id="purchase"
+            />
+            <label for="purchase">Purchase</label>
+          </td>
+        </tr>
+        <tr>
+          <td>Occupation:</td>
+          <td>
+            <select name="occupation" required>
+              <option selected>Student</option>
+              <option>Professional</option>
+              <option>Business</option>
+              <option>Other</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Want us to send you junk emails?</td>
+          <td>
+            <input
+              type="radio"
+              name="junk"
+              id="absolutely"
+              value="absolutely"
+              required
+            />
+            <label for="absolutely">Absolutely</label><br />
+            <input type="radio" name="junk" id="nope" value="no way man" />
+            <label for="nope">No way man</label>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" class="actions">
+            <input type="submit" value="Submit" />
+            &nbsp;
+            <input type="reset" value="Reset" />
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

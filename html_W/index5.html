@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll Top and Bottom Example</title>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        min-height: 400vh; /* Ensures enough space for scrolling */
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 24px;
+      }
+      .top-link,
+      .bottom-link {
+        display: inline-block;
+        margin: 20px 0;
+        padding: 12px 24px;
+        background-color: #1976d2;
+        color: #fff;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background 0.2s;
+      }
+      .top-link:hover,
+      .bottom-link:hover {
+        background-color: #005bb5;
+      }
+      .spacer {
+        height: 80vh; /* Creates spacing between links */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" id="top">
+      <a href="#bottom" class="top-link">Go to Bottom</a>
+      <div class="spacer"></div>
+      <a id="bottom"></a>
+      <a href="#top" class="bottom-link">Back to Top</a>
+    </div>
+  </body>
+</html>

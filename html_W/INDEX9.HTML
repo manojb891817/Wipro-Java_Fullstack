@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Online Registration Form</title>
+    <style>
+      body {
+        background: #f4f6fa;
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .form-container {
+        background: #fff;
+        padding: 32px 36px 24px 36px;
+        border-radius: 10px;
+        box-shadow: 0 4px 18px #ccd3df60;
+        width: 370px;
+        margin: auto;
+      }
+      h2 {
+        text-align: center;
+        margin-bottom: 24px;
+        letter-spacing: 1.2px;
+        color: #324376;
+      }
+      table {
+        width: 100%;
+      }
+      td {
+        padding: 10px 0;
+        vertical-align: top;
+      }
+      input[type="text"],
+      input[type="password"],
+      textarea,
+      select {
+        width: 98%;
+        padding: 7px;
+        border-radius: 4px;
+        border: 1px solid #bfc6d3;
+        font-size: 15px;
+        margin-top: 3px;
+        font-family: inherit;
+      }
+      textarea {
+        resize: vertical;
+        min-height: 50px;
+      }
+      .radio-group label {
+        margin-right: 17px;
+      }
+      .actions {
+        text-align: center;
+        padding-top: 12px;
+      }
+      input[type="submit"],
+      input[type="reset"] {
+        padding: 8px 24px;
+        border: none;
+        background: #1b6bc0;
+        color: #fff;
+        border-radius: 4px;
+        margin-right: 6px;
+        cursor: pointer;
+        font-size: 15px;
+      }
+      input[type="reset"] {
+        background: #888;
+      }
+      input[type="submit"]:hover {
+        background: #235adf;
+      }
+      input[type="reset"]:hover {
+        background: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>Online Registration Form</h2>
+      <form>
+        <table>
+          <tr>
+            <td>Username:</td>
+            <td><input type="text" name="username" required /></td>
+          </tr>
+          <tr>
+            <td>Password:</td>
+            <td><input type="password" name="password" required /></td>
+          </tr>
+          <tr>
+            <td>Confirm Password:</td>
+            <td><input type="password" name="confirm_password" required /></td>
+          </tr>
+          <tr>
+            <td>Name:</td>
+            <td><input type="text" name="fullname" required /></td>
+          </tr>
+          <tr>
+            <td>Gender:</td>
+            <td class="radio-group">
+              <label
+                ><input type="radio" name="gender" value="Male" required />
+                Male</label
+              >
+              <label
+                ><input type="radio" name="gender" value="Female" />
+                Female</label
+              >
+              <label
+                ><input type="radio" name="gender" value="Other" /> Other</label
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>Address:</td>
+            <td><textarea name="address" rows="3" required></textarea></td>
+          </tr>
+          <tr>
+            <td>Profession:</td>
+            <td>
+              <select name="profession" required>
+                <option value="">--Select--</option>
+                <option>Student</option>
+                <option>Professional</option>
+                <option>Business</option>
+                <option>Other</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" class="actions">
+              <input type="submit" value="Submit" />
+              <input type="reset" value="Reset" />
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>

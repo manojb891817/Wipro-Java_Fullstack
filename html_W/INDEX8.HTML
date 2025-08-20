@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Frames Example: Font/Alignment</title>
+    <style>
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+      }
+      .container {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      .header {
+        height: 30vh;
+        background: #e8eaf6;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 2px solid #bdbdbd;
+      }
+      .main {
+        height: 70vh;
+        display: flex;
+      }
+      .sidebar {
+        width: 30%;
+        background: #fff;
+        border-right: 2px solid #bdbdbd;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: flex-start;
+        padding: 38px 16px;
+      }
+      .sidebar a {
+        display: block;
+        font-size: 20px;
+        margin-bottom: 20px;
+        color: #1a237e;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.2s;
+      }
+      .sidebar a:hover {
+        color: #1976d2;
+      }
+      .content {
+        width: 70%;
+        padding: 34px 26px;
+        background: #f5f7fa;
+        overflow-y: auto;
+      }
+      img {
+        max-width: 220px;
+        max-height: 90%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/200px-PNG_transparency_demonstration_1.png"
+          alt="Header Image"
+        />
+      </div>
+      <div class="main">
+        <div class="sidebar">
+          <a href="f.html" target="contentFrame">Font</a>
+          <a href="alignment.html" target="contentFrame">Alignment</a>
+        </div>
+        <iframe
+          name="contentFrame"
+          class="content"
+          src="f.html"
+          frameborder="0"
+        >
+        </iframe>
+      </div>
+    </div>
+  </body>
+</html>
